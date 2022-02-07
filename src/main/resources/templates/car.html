@@ -1,17 +1,26 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <meta charset="UTF-8">
+    `
     <title>Title</title>
 </head>
 <body>
-<h1>Kurs ThemeLEAF</h1>
-<p>Hello world</p>
-<p th:text="${name}"></p>
-<p th:text="${Car.getModel()}"></p>
-<p th:text="${Car.getMark()}"></p>
+<h3>Kurs ThemeLEAF
+    <p>Hello world</p>
+    <p th:text="${name}"></p>
+    <p th:text="${Car.getModel()}"></p>
+    <p th:text="${Car.getMark()}"></p>
+</h3>
+
+<h5>
+    <tr th:each="Car:${cars}">
+        <td th:text="${Car.getMark()}"></td>
+        <td th:text="${Car.getModel()}"></td>
+        <p>===========================</p>
+    </tr>
+</h5>
 </body>
 </html>
